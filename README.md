@@ -45,6 +45,9 @@ Datasets usados:
 - **Sidebar**
 - **Camadas** toggles permitem comparar padrões (ex.: ligar/desligar buffers e áreas críticas).
 - **Feedback rápido:** tooltip no hover e estados visuais no mapa reduzem clique/tempo para insight.
+- Uso de uma paleta de cores institucional (Azul para ações e Vermelho Terracota para menus). Modo dark para melhor contraste em telas, botões, textos e posicionamentos dos elementos de forma intuitiva.
+
+
 
 ## Performance e confiabilidade
 - Cache em `localStorage` com TTL para dados e cálculos geométricos.
@@ -52,9 +55,9 @@ Datasets usados:
 
 ## Limitações
 
-- Integrar os dados de parcel
+- Integrar os dados de parcel (lotes) waterways, refinar a metodologia
 - Construir uma backend para os cálculos, afim de obter melhor performance e não depender do cliente
-- Tornar a visualização dos dados mais dinâmicas
+- Tornar a visualização dos dados mais dinâmicas (Polir a UI/UX)
 
 ## Rodando localmente
 ### Pré-requisitos
