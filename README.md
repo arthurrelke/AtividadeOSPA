@@ -55,7 +55,7 @@ Datasets usados:
 
 ## Limitações
 
-- Integrar os dados de parcel (lotes) waterways, refinar a metodologia
+- Integrar os dados de parcel (lotes) waterways, refinar a metodologia (Resquícios de tentativas de integrar esses dados ainda estão nos arquivos)
 - Construir uma backend para os cálculos, afim de obter melhor performance e não depender do cliente
 - Tornar a visualização dos dados mais dinâmicas (Polir a UI/UX)
 
