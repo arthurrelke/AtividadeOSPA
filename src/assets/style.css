@@ -1,0 +1,100 @@
+/**
+ * Estilos globais da aplicação
+ * Chicago Parks Analysis - Urban Decision Support Platform
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset e configurações globais */
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  html,
+  body {
+    @apply h-full w-full m-0 p-0;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    @apply bg-chi-map text-gray-100;
+  }
+
+  #app {
+    @apply h-full w-full;
+  }
+}
+
+/* Componentes customizados reutilizáveis */
+@layer components {
+  /* Botão de ação primária (azul Chicago) */
+  .btn-action {
+    @apply bg-chi-action hover:bg-chi-action/90 text-white;
+    @apply px-4 py-2 rounded-md font-medium;
+    @apply transition-colors duration-200;
+    @apply focus:outline-none focus:ring-2 focus:ring-chi-action/50;
+  }
+
+  /* Botão de navegação (terracota) */
+  .btn-nav {
+    @apply bg-chi-accent hover:bg-chi-accent/90 text-white;
+    @apply px-4 py-2 rounded-md font-medium;
+    @apply transition-colors duration-200;
+    @apply focus:outline-none focus:ring-2 focus:ring-chi-accent/50;
+  }
+
+  /* Card genérico */
+  .card {
+    @apply bg-chi-sidebar/80 backdrop-blur-sm;
+    @apply border border-white/10 rounded-lg;
+    @apply p-4;
+  }
+}
+
+/* Utilities customizadas */
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+}
+
+/* Estilos do Mapbox (ajustes finos) */
+.mapboxgl-canvas {
+  @apply outline-none;
+}
+
+.mapboxgl-ctrl-bottom-left,
+.mapboxgl-ctrl-bottom-right {
+  @apply opacity-70 hover:opacity-100 transition-opacity;
+}
+
+/* ------------------------------------------------------------------ */
+/* Mapbox Popup - Tooltip UI                                          */
+/* ------------------------------------------------------------------ */
+
+.chi-hover-tooltip .mapboxgl-popup-content {
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+}
+
+.chi-hover-tooltip .mapboxgl-popup-tip {
+  display: none;
+}
